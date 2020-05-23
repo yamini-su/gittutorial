@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Chelsea Market', cursive;
+    
 }
 
 p,blockquote{
@@ -20,7 +21,15 @@ ul{
 }
 
 .logo{
-    width: 130px;
+
+    width: 150px;
+    text-align: left;
+    font-size: 4em;
+}
+.logo img{
+    margin-top: 20%
+    border-radius: 100%;
+   
 }
 
 header{
@@ -28,37 +37,64 @@ header{
     justify-content: space-between;
 }
 
-.hide-mobile{
-    display: none;
-}
+
 
 .menu{
-    width: 25px;
+    width: 35px;
     margin-top:45%
 }
 
 .server{
-    width: 75%;
+    width: 80%;
     margin: 4em,2em,1em,0;
+    
 }
   
-h1,.subhead{
+h1{
     position: relative;
-    z-index: 3s;
+    width: 100%;
+    font-size: 6em;
+    margin-top: 30%;
+    
 }
 
 .subhead{
-    font-size: 1.1em;
+    position: relative;
+    font-size:xx-large ;
+    z-index: 3;
 }
 
 .blue-container{
     width:100%;
-    background:#00C2FF;
+    background:#3774e6;
     color:white;
     margin-top: 15%;
     padding: 4em 0 2em;
     border-top-left-radius: 50px;
+    border-bottom-right-radius:50px ;
     transform: skewY(-2deg);
+}
+
+.blue-container:before{
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color:#3774e6;
+    position: absolute;
+    top: -39px;
+    right: 0;
+    z-index: -1;
+}
+.blue-container:after{
+    content: "";
+    width: 80px;
+    height: 80px;
+    background-color:white;
+    position: absolute;
+    top: -80px;
+    z-index: -1;
+    right: 0;
+    border-radius: 50%;
 }
 
 .blue-container ul{
@@ -66,3 +102,184 @@ h1,.subhead{
 }
 
 
+.blue-container ul li{
+    margin-bottom: 3em;
+
+}
+
+.blue-container ul li{
+    padding: 0.5em;
+}
+.blue-container img{
+    width: 14%;
+}
+
+.blue-container p{
+    font-size: 1.1em;
+}
+
+.grey-container{
+    background-color: lightgray;
+    padding: 9em 0 2em;
+    margin-top: -6%;
+    font-size: 1.3em;
+}
+
+.grey-container ul li:first-child{
+    margin-bottom: 2.5em;
+}
+
+.grey-container img{
+    border-radius: 50%;
+}
+
+figcaption{
+    font-weight: bolder;
+    color:#3774e6;
+}
+
+h2{
+    padding-top: 1em;
+    margin-top: 8%;
+    font-size: 5em;
+}
+
+.cta{
+    background-color: #00cc80;
+    width: cal(100%-1em);
+    display: block;
+    font-size: 2.8em;
+    color: mintcream;
+    border-radius: 20px;
+    padding: .5em;
+    text-decoration: none;
+    margin: 3% 5% 7%;
+    position: relative;
+    -z-index: 4;
+}
+
+.footer-container{
+    width: auto;
+    background: #3D444A;
+    color: wheat;
+    padding: 3em;
+    padding-top: 2em;
+    border-top-right-radius:40px;
+    border-bottom-left-radius:40px;
+    transform: skewY(1deg);
+    margin-bottom: -19%;
+}
+
+.footer-container img{
+    border-radius: 50%;
+}
+
+.footer-container.container{
+    transform: skewY(-1deg);
+}
+
+.footer-container.container a{
+    text-decoration:none;
+}
+
+.address{
+    color: white;
+}
+
+ul.footer-links li a{
+    color: white;
+}
+ul.footer-links li{
+    display: inline;
+}
+
+.hide-mobile{
+    display: none;
+}
+
+
+nav ul{
+    position:fixed;
+    width: 30%;
+    top: 0;
+    right: 0;
+    text-align: left;
+    background-color: rgb(36,41,44);
+    height: 100%;
+    z-index: 8;
+    padding-top: 4em;
+}
+
+nav ul img{
+    border-radius: 100%;
+    width: 25px;
+    cursor: pointer;
+}
+
+nav ul a{
+    color: whitesmoke;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding:1em 3em;
+    background: rgb(43,49,53);
+}
+
+nav ul li a:hover{
+    background: rgb(64,73,80);
+
+}
+
+.exit-btn{
+    margin-bottom: 1em;
+    margin-top: -1.3em;
+    text-align: right;
+    padding:0 1.4em;
+}
+
+@media only screen and (min-width:1024px){
+    .cta{
+        width: 50%;
+        left:50%;
+        transform: translateX(-60%);
+    }
+    .container{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .hide-desktop{
+        display: none;
+    }
+    .show-desktop{
+        display: block;
+        margin: 0 auto 13% auto;
+    }
+    nav ul{
+        position: inherit;
+        width: auto;
+        background: none;
+        height: auto;
+        display: flex;
+        padding-top: 0;
+    }
+    
+    nav ul li{
+        float: left;
+    }
+    nav ul li a{
+        color: black;
+        background-color: inherit;
+        text-align: right;
+        text-decoration: none;
+    }
+    nav ul li a:hover{
+        background-color: inherit;
+    }
+    .blue-container ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+}
